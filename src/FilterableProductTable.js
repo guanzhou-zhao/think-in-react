@@ -9,14 +9,34 @@ class FilterableProductTable extends React.Component {
       filterText:'ball',
       isStockOnly: true
     }
+
+    this.onFilterTextChange = this.onFilterTextChange.bind(this)
+    this.onInStockChange = this.onInStockChange.bind(this)
   }
 
+  onFilterTextChange(filterText) {
+    this.setState({
+      filterText
+    })
+  }
+
+  onInStockChange(checked) {
+    this.setState({
+      isStockOnly: checked
+    })
+  }
 
   render() {
     return (
       <main>
-        <SearchBar filterText={this.state.filterText} isStockOnly={this.state.isStockOnly}/>
-        <ProductTable products = {this.props.products} filterText={this.state.filterText} isStockOnly={this.state.isStockOnly}/>
+        <SearchBar
+          filterText={this.state.filterText}
+          isStockOnly={this.state.isStockOnly}
+          onFilterTextChange={this.onFilterTextChange}
+          onInStockChange={this.onInStockChange}/>
+        <ProductTable
+          products = {this.props.products}
+          filterText={this.state.filterText} isStockOnly={this.state.isStockOnly}/>
       </main>
     )
   }
