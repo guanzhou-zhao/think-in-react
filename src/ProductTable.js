@@ -6,12 +6,12 @@ function ProductTable(props) {
 
   let category;
   const rows = []
-  props.products.forEach(product => {
+  props.products.forEach((product, index) => {
     if (product.category !== category) {
       category = product.category;
-      rows.push(<ProductCategoryRow category={category} />);
+      rows.push(<ProductCategoryRow key={index + category} category={category} />);
     }
-    rows.push(<ProductRow product={product}/>);
+    rows.push(<ProductRow key={index} product={product}/>);
 
   });
 
@@ -20,8 +20,8 @@ function ProductTable(props) {
     <table>
       <thead>
         <tr>
-          <th style={{'text-align':'left'}}>Name</th>
-          <th style={{'text-align':'left'}}>Price</th>
+          <th style={{'textAlign':'left'}}>Name</th>
+          <th style={{'textAlign':'left'}}>Price</th>
         </tr>
       </thead>
       <tbody>

@@ -5,7 +5,7 @@ function SearchBar(props) {
     <form>
       <input type="search" placeholder="Search..."/><br/>
       <input id="in-stock-only" type="checkbox" />
-      <label for="in-stock-only">Only show products in stock</label>
+      <label htmlFor="in-stock-only">Only show products in stock</label>
     </form>
   )
 }
