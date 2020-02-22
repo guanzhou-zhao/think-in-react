@@ -5,17 +5,21 @@ import ProductRow from './ProductRow';
 function ProductTable(props) {
   const filterText = props.filterText
   const isStockOnly = props.isStockOnly
-  let category;
+  let lastCategory;
   const rows = []
   props.products.forEach((product, index) => {
-    if (product.category !== category) {
-      category = product.category;
-      rows.push(<ProductCategoryRow key={index + category} category={category} />);
+    if (!product.name.includes(filterText)) {
+      return;
     }
-    if (product.name.toLowerCase().includes(filterText.toLowerCase()) && isStockOnly?product.stocked:true) {
-      console.log(product.name)
-      rows.push(<ProductRow key={index} product={product}/>);
+    if (isStockOnly && !product.stocked) {
+      return;
     }
+    if (product.category !== lastCategory) {
+      rows.push(<ProductCategoryRow key={index + product.category} category={product.category} />);
+    }
+    rows.push(<ProductRow key={index} product={product}/>);
+    lastCategory = product.category;
+
   });
 
   return (
