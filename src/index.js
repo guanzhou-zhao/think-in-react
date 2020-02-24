@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import HookExample from './hook/HookExample'
 import TimerInHook from './hook/TimerInHook'
+import TimerInCustomizedHook from './hook/TimerInCustomizedHook'
 import * as serviceWorker from './serviceWorker';
 
 const appGalery = (
@@ -11,6 +12,7 @@ const appGalery = (
     <App />
     <HookExample />
     <TimerInHook />
+    <TimerInCustomizedHook />
   </div>
 )
 
