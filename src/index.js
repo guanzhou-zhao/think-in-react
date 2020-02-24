@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import HookExample from './hook/HookExample'
+import TimerInHook from './hook/TimerInHook'
 import * as serviceWorker from './serviceWorker';
 
 const appGalery = (
   <div>
     <App />
     <HookExample />
+    <TimerInHook />
   </div>
 )
 
