@@ -6,6 +6,8 @@ import HookExample from './hook/HookExample'
 import TimerInHook from './hook/TimerInHook'
 import TimerInCustomizedHook from './hook/TimerInCustomizedHook'
 import CustomTextInput from './refs/CustomTextInput'
+import AutoFocusTextInput from './refs/AutoFocusTextInput'
+import CallbackRefCustomTextInput from './refs/CallbackRefCustomTextInput'
 import * as serviceWorker from './serviceWorker';
 
 const appGalery = (
@@ -15,6 +17,8 @@ const appGalery = (
     <TimerInHook />
     <TimerInCustomizedHook />
     <CustomTextInput />
+    <AutoFocusTextInput />
+    <CallbackRefCustomTextInput />
   </div>
 )
 

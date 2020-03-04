@@ -19,6 +19,9 @@ class CustomTextInput extends React.Component {
         <button onClick={this.focusTextInput}>
           Click to focus
         </button>
+        <p>
+          Use a ref to store the reference to a DOM node.
+        </p>
       </div>
     )
   }
