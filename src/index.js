@@ -5,6 +5,7 @@ import App from './App';
 import HookExample from './hook/HookExample'
 import TimerInHook from './hook/TimerInHook'
 import TimerInCustomizedHook from './hook/TimerInCustomizedHook'
+import CustomTextInput from './refs/CustomTextInput'
 import * as serviceWorker from './serviceWorker';
 
 const appGalery = (
@@ -13,6 +14,7 @@ const appGalery = (
     <HookExample />
     <TimerInHook />
     <TimerInCustomizedHook />
+    <CustomTextInput />
   </div>
 )
 
