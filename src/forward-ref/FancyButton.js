@@ -1,11 +1,17 @@
 import React from 'react';
 import './FancyButton.css'
-export default class FancyButton extends React.Component {
+class FancyButton extends React.Component {
   render() {
+    const {forwardedRef, ...rest} = this.props;
+
     return (
-      <button className="fancy">
+      <button ref={forwardedRef} {...rest} className="fancy">
         FancyButton
       </button>
     )
   }
 }
+
+export default React.forwardRef((props, ref) => {
+  return <FancyButton {...props} forwardedRef={ref} />
+})
