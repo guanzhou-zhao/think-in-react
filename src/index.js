@@ -8,6 +8,7 @@ import TimerInCustomizedHook from './hook/TimerInCustomizedHook'
 import CustomTextInput from './refs/CustomTextInput'
 import AutoFocusTextInput from './refs/AutoFocusTextInput'
 import CallbackRefCustomTextInput from './refs/CallbackRefCustomTextInput'
+import ForwardRef from './forward-ref/ForwardRef'
 import * as serviceWorker from './serviceWorker';
 
 const appGalery = (
@@ -19,6 +20,7 @@ const appGalery = (
     <CustomTextInput />
     <AutoFocusTextInput />
     <CallbackRefCustomTextInput />
+    <ForwardRef />
   </div>
 )
 
