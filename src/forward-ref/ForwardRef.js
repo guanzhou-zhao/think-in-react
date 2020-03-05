@@ -1,5 +1,5 @@
 import React from 'react';
-import FancyButton from './FancyButton'
+import FancyButton from './FancyButtonWithDataProp'
 
 export default class ForwardRef extends React.Component {
   constructor(props) {
