@@ -9,6 +9,7 @@ import CustomTextInput from './refs/CustomTextInput'
 import AutoFocusTextInput from './refs/AutoFocusTextInput'
 import CallbackRefCustomTextInput from './refs/CallbackRefCustomTextInput'
 import ForwardRef from './forward-ref/ForwardRef'
+import AppUseContext from './context/AppUseContext'
 import * as serviceWorker from './serviceWorker';
 
 const appGalery = (
@@ -21,6 +22,7 @@ const appGalery = (
     <AutoFocusTextInput />
     <CallbackRefCustomTextInput />
     <ForwardRef />
+    <AppUseContext />
   </div>
 )
 
